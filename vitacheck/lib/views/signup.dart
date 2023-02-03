@@ -234,14 +234,7 @@ class _SignUpState extends State<SignUp> {
                                             
                                             context: context,
                                             );
-                                      //  WidgetsBinding.instance
-                                      //             .addPostFrameCallback((_) {
-                                      //           if (auth.resMessage != "") {
-                                                  ShowToast.vitaToast(message:auth.resMessage,warn: auth.state,long: true);
-                                                 
-                                                  auth.clear();
-                                              //   }
-                                              // });
+                                  
                                       });
                                 },
                               ),

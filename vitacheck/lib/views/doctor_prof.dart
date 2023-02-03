@@ -10,6 +10,8 @@ class DoctorProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+               iconTheme: IconThemeData(color: const Color(0xFF3E64FF),),
+
         scrolledUnderElevation: 0,
         elevation: 0,
         backgroundColor: Colors.white70,
@@ -113,20 +115,17 @@ class DoctorProfile extends StatelessWidget {
                                           fontWeight: FontWeight.normal)),
                                 ],
                               ),
-                              TextButton(
-                                onPressed: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: const Color(0xFF3E64FF),
-                                  ),
-                                  width: 133,
-                                  height: 30,
-                                  child: Center(
-                                    child: Text(
-                                      "Book appointment",
-                                      style: TextStyle(color: Colors.white),
-                                    ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  color: const Color(0xFF3E64FF),
+                                ),
+                                width: 133,
+                                height: 30,
+                                child: Center(
+                                  child: Text(
+                                    "Book appointment",
+                                    style: TextStyle(color: Colors.white),
                                   ),
                                 ),
                               )

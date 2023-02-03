@@ -214,14 +214,7 @@ class _LogInState extends State<LogIn> {
                                                   password: _password!.trim(),
                                                   context: context
                                                   );
-                                              // WidgetsBinding.instance
-                                              //     .addPostFrameCallback((_) {
-                                              //   if (auth.resMessage != "") {
-                                                  ShowToast.vitaToast(message:auth.resMessage,warn: auth.state,long: true);
-                                                 
-                                                  auth.clear();
-                                                // }
-                                              // });
+                                           
                                             });
                                       },
                                     )),

@@ -9,6 +9,7 @@ class Doctor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+       iconTheme: IconThemeData(color: const Color(0xFF3E64FF),),
         scrolledUnderElevation: 0,
         elevation: 0,
         backgroundColor: Colors.white70,

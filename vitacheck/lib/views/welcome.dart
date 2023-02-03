@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:vitacheck/views/doctor_prof.dart';
 
 import '../pageNavigator.dart';
 import '../widgets/bottom_navigation..dart';
 import 'about.dart';
+import 'data_sensor.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -35,28 +37,34 @@ class Welcome extends StatelessWidget {
               ),
               TextButton(
                   onPressed: () {},
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0, 3),
-                          )
-                        ],
-                      ),
-                      height: 60,
-                      width: 257,
-                      child: Center(
-                        child: Text(
-                          "Check Vitals",
-                          style:
-                              TextStyle(color: Color(0xff3E64FF), fontSize: 24),
+                  child: GestureDetector(
+                    onTap: (){
+
+                    pageNavigator(ctx: context).nextPage(page: SensorHome());
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: Offset(0, 3),
+                            )
+                          ],
                         ),
-                      ))),
+                        height: 60,
+                        width: 257,
+                        child: Center(
+                          child: Text(
+                            "Check Vitals",
+                            style:
+                                TextStyle(color: Color(0xff3E64FF), fontSize: 24),
+                          ),
+                        )),
+                  )),
               Text(
                 "OR",
                 style: TextStyle(
@@ -65,8 +73,10 @@ class Welcome extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              TextButton(
-                onPressed: () {},
+              GestureDetector( onTap: (){
+
+                    pageNavigator(ctx: context).nextPage(page: DoctorProfile());
+                    },
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,

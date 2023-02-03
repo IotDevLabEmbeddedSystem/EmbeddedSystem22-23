@@ -8,7 +8,8 @@ class Calendar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
+        appBar: AppBar(       iconTheme: IconThemeData(color: const Color(0xFF3E64FF),),
+
           actions: [
             IconButton(
               onPressed: () {},

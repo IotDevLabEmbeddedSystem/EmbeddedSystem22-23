@@ -13,6 +13,8 @@ class Graph extends StatelessWidget {
         selectedIndex: 4,
       ),
       appBar: AppBar(
+               iconTheme: IconThemeData(color: const Color(0xFF3E64FF),),
+
         scrolledUnderElevation: 0,
         elevation: 0,
         backgroundColor: Colors.white70,
