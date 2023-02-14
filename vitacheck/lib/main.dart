@@ -7,6 +7,8 @@ import 'package:vitacheck/responsive/Responsive.dart';
 import 'package:vitacheck/responsive/desktop_view.dart';
 import 'package:vitacheck/responsive/mobile_view.dart';
 
+import 'provider/messaging_provider.dart';
+
 
 void main() async {
   return runApp(MultiProvider(
@@ -14,8 +16,13 @@ void main() async {
         ChangeNotifierProvider(create: (_) => Authentication()),
         ChangeNotifierProvider(create: (_) => DatabaseProvider()),
         ChangeNotifierProvider(create: (_) => SensorDataApi()),
+        ChangeNotifierProvider(create: (_) => MessagingDataApi()),
+        
         StreamProvider<Map>(
-            create: (_) => SensorDataApi().initStream(), initialData: {})
+            create: (_) => SensorDataApi().initStream(), initialData: {}),
+         
+        StreamProvider<Map>(
+            create: (_) => MessagingDataApi().initChat(), initialData: {})
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,

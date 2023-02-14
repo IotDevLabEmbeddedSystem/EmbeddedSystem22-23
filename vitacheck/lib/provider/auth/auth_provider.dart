@@ -82,6 +82,7 @@ bool get state=>_state;
       var dio = Dio();
       Response response =
           await dio.post("${APPBASEURL.baseUrl}login", data: body);
+          print(response.data);
       if (response.data['status']==200) {
      
         final res = response.data;

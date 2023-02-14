@@ -12,13 +12,14 @@ Map respData={};
   int _status=0;
   Map get message => _message;
   int get  status=>_status;
-   Stream<Map> initStream() async* {
+   Stream<Map> initChat() async* {
   var public = await DatabaseProvider().getUserId();
     try {
       var dio = Dio();
       Response response = await dio.get(
           "${APPBASEURL.baseUrl}chat_patient/$public");
          respData= response.data;
+         print(respData);
 
          print(respData);
       if (respData["status"] == 200) {
@@ -45,21 +46,25 @@ Map respData={};
 class ReplyDataApi extends ChangeNotifier {
 
 Map respData={};
-  Map _message = {};
+  String _message = "";
   int _status=0;
-  Map get message => _message;
+  String get message => _message;
   int get  status=>_status;
-   Stream<Map> initStream() async* {
+   Stream<Map> replyChat() async* {
   var public = await DatabaseProvider().getUserId();
+  Map body={
+"user_Id":public,
+"message":message
+  };
     try {
       var dio = Dio();
-      Response response = await dio.get(
-          "${APPBASEURL.baseUrl}chat_patient/$public");
+      Response response = await dio.post(
+          "${APPBASEURL.baseUrl}chat_nurse",data:body);
          respData= response.data;
 
          print(respData);
       if (respData["status"] == 200) {
-        _message =respData;
+        _message =respData['msg'];
         print("<____Status:${respData["status"]}");
         notifyListeners();
        

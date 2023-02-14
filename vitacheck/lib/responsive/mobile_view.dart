@@ -16,7 +16,7 @@ class mobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DoctorProfile();
+    return MyApp();
   }
 }
 

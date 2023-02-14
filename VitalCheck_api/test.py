@@ -356,8 +356,9 @@ def message_nurse():
     user_id=data["user_id"]
     message=data["message"]
     
-    new_data=Nurse(user_id=user_id,message=message)
-    db.commit(new_data)
+    new_data=Message(user_id=user_id,message=message)
+    db.session.add(new_data)
+    db.session.commit()
     try:
         return jsonify({'status':200,"msg": new_data}),200
     except:
@@ -370,16 +371,17 @@ def message_nurse():
 def nurse_message(user_id):
     
     
-    new_data=Nurse.query.filter_by(user_id=user_id)
+    new_data=Message.query.filter_by(user_id=user_id)
     print(new_data)
+    
     try:
-        return jsonify({'status':200,"msg": "sent"}),200
+        return jsonify([{'status':200,"user_id':m.user_id,msg": m.message}for m in new_data]),200
     except:
         
         return jsonify({'status':204,"msg": "Data not sent"}),200
 
 
-@aap.route('/api/appointment',methods=['POST'])
+@app.route('/api/appointment',methods=['POST'])
 def bookAppointment():
     data=request.get_json()
     user_id=data['user_id']
