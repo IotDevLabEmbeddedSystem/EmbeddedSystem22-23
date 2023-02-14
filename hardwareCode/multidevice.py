@@ -43,15 +43,15 @@ if not wlan.isconnected():
 # Api Endpoint#
 
 
-def api_GET():
-    try:
-        req=request.get("https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/sensorData")
-        req.close()
+# def api_GET():
+#     try:
+#         req=request.get("https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/sensorData")
+#         req.close()
 
-    #     print(req.json(),print(req.status_code))
-        return req.json(),req.status_code
-    except:
-        return "error connecting to api"
+#     #     print(req.json(),print(req.status_code))
+#         return req.json(),req.status_code
+#     except:
+#         return "error connecting to api"
     
 def api_POST(Sensor_data={}):
     headers = {

@@ -1,18 +1,4 @@
-# This work is a lot based on:
-# - https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library
-#   Written by Peter Jansen and Nathan Seidle (SparkFun)
-#   This is a library written for the Maxim MAX30105 Optical Smoke Detector
-#   It should also work with the MAX30105, which has a Green LED, too.
-#   These sensors use I2C to communicate, as well as a single (optional)
-#   interrupt line that is not currently supported in this driver.
-#   Written by Peter Jansen and Nathan Seidle (SparkFun)
-#   BSD license, all text above must be included in any redistribution.
-#
-# - https://github.com/kandizzy/esp32-micropython/blob/master/PPG/ppg/MAX30105.py
-#   A port of the library to MicroPython by kandizzy
-#
-# This driver aims at giving almost full access to Maxim MAX30102 functionalities.
-#                                                                          n-elia
+                                                                 
 
 import uerrno
 from machine import SoftI2C
