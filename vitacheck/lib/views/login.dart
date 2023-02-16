@@ -3,7 +3,7 @@ import 'package:validators/validators.dart';
 import 'package:provider/provider.dart';
 import 'package:vitacheck/pageNavigator.dart';
 import 'package:vitacheck/provider/auth/auth_provider.dart';
-import 'package:vitacheck/widgets/vitatoast.dart';
+
 
 import 'signup.dart';
 

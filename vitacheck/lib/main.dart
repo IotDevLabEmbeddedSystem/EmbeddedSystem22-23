@@ -17,6 +17,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => DatabaseProvider()),
         ChangeNotifierProvider(create: (_) => SensorDataApi()),
         ChangeNotifierProvider(create: (_) => MessagingDataApi()),
+        ChangeNotifierProvider(create: (_) =>ReplyDataApi()),
         
         StreamProvider<Map>(
             create: (_) => SensorDataApi().initStream(), initialData: {}),

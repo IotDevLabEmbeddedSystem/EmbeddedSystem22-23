@@ -17,14 +17,11 @@ Map respData={};
     try {
       var dio = Dio();
       Response response = await dio.get(
-          "${APPBASEURL.baseUrl}chat_patient/$public");
+          "${APPBASEURL.baseUrl}chat_nurse/e2b6c826-c314-4f64-8abd-48ebce0bb507");
          respData= response.data;
-         print(respData);
-
-         print(respData);
       if (respData["status"] == 200) {
         _message =respData;
-        print("<____Status:${respData["status"]}");
+        // print("<____Status:${respData["status"]}");
         notifyListeners();
        
       } else {
@@ -50,12 +47,15 @@ Map respData={};
   int _status=0;
   String get message => _message;
   int get  status=>_status;
-   Stream<Map> replyChat() async* {
+    replyChat({required String reply}) async {
+      print(" my reply to you $reply");
   var public = await DatabaseProvider().getUserId();
+  print(" my reply to you $reply");
   Map body={
 "user_Id":public,
-"message":message
+"message":reply
   };
+ 
     try {
       var dio = Dio();
       Response response = await dio.post(
@@ -81,5 +81,6 @@ Map respData={};
       print(e);
      
     }
+  
   }
 }

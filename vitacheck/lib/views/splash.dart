@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:vitacheck/provider/Database/db_provider.dart';
 import 'package:vitacheck/views/welcome.dart';
-
 import '../pageNavigator.dart';
 import 'homeLogin.dart';
 
