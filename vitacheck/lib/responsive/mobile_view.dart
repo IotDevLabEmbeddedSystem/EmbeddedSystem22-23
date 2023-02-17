@@ -2,6 +2,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:toast/toast.dart';
+import 'package:vitacheck/views/ai_chat.dart';
 import 'package:vitacheck/views/doctor_prof.dart';
 import 'package:vitacheck/views/graph.dart';
 import 'package:vitacheck/views/login.dart';
@@ -16,7 +17,7 @@ class mobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyApp();
+    return aichat();
   }
 }
 

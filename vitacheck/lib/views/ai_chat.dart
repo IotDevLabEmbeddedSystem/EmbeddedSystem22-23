@@ -19,13 +19,13 @@ class aichat extends StatefulWidget {
 class _aichatState extends State<aichat> {
   String reply_message ="";
   bool _user= false;
- getMessages ( ) async{
- await  MessageBubble(
-                    sender: "messageSend[0]",
-                    text: "",
-                    user: true,
-                  );
-}
+//  getMessages ( ) async{
+//  await  MessageBubble(
+//                     sender: "messageSend[0]",
+//                     text: "",
+//                     user: true,
+//                   );
+// }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _aichatState extends State<aichat> {
     bool _ishintTextcleared=false;
     
     final messageTextController = TextEditingController();
-      // List<String> messages=[];
+      List<dynamic> messages=[];
       // messages.add(message.message['msg']);
 
     return StreamBuilder<Map>(
@@ -82,8 +82,9 @@ class _aichatState extends State<aichat> {
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 children: [
                   MessageBubble(
-                    sender:snapshot.hasData !=false ? message.message["user_id"]:"user",
-                    text:message.message['msg'],
+                    sender:message.message["user_id"].toString(),
+                    text:message.message["msg"].toString(),
+                    date: message.message["date"].toString(),
                     user:snapshot.hasData !=false ?_user:!false,
                   ),
                   // Text("Dta: $reply_message")
