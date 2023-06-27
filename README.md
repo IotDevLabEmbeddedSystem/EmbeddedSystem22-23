@@ -15,7 +15,8 @@ SQLlite db is the database server in use.
 base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
 
 ### api Endpoints
-|Status    |    Method    |            EndPoint                                                              |
+|Status    |    Method    |            EndPoint    |
+| :-----:  | :----------: | :--------------------: |
 |    DONE  |     post     | base_URL+sensor_data   |
 |   DONE   |     GET      |  base_URL+sensorData   |
 |   DONE   |     POST     | base_URL+login         |
