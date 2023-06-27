@@ -76,7 +76,7 @@ base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
      Microcontroller used was esp32 ,sensors include Max10302 for heart beat and pulse ,time of flight for measuring height,gy-906 for temperature,load cell for measuring weight.the data collected was pushed to online server which can be access form the api section.
 
 # Display
-[Demo] 
+! [Display of vital from sensor] (https://github.com/IotDevLabEmbeddedSystem/EmbeddedSystem22-23/blob/main/Displaytft.jpeg)
 
 
 
