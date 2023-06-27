@@ -12,7 +12,7 @@ The project includes an API that uses Flask to handle databases and simple reque
 
 railway, which makes it simple to deploy Flask apps, hosted the API.
 SQLlite db is the database server in use.
-base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
+<br> base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
 
 ### api Endpoints
 |Status    |    Method    |            EndPoint    |
@@ -59,7 +59,9 @@ base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
 
 
 ### Platforms 
-     Platforms are divided into two categories: mobile apps and web applications. Mobile apps are used by patients to check information such as                appointment times, doctor availability, and health statistics.
+     Platforms are divided into two categories: mobile apps and web applications.
+     Mobile apps are used by patients to check information such as 
+     vitals , appointment times, doctor availability, and health statistics.
 
 
 # Mobile Platform
@@ -68,12 +70,15 @@ base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
      All Screens are completed and logics still in progress (ideation) 
      
 # Web Platform
-     #Web Platform on hold since the project was built on top of an api to make it easy to integrate with already existing web apps for some hospitals
+     Web Platform on hold since the project was built on top of an api to make it easy to 
+     integrate with already existing web apps for some hospitals
      
      
      
 # Hardware
-     Microcontroller used was esp32 ,sensors include Max10302 for heart beat and pulse ,time of flight for measuring height,gy-906 for temperature,load cell for measuring weight.the data collected was pushed to online server which can be access form the api section.
+     Microcontroller used was esp32 ,sensors include Max10302 for heart beat and pulse , 
+     time of flight for measuring height,gy-906 for temperature,load cell for measuring weight. 
+     the data collected was pushed to online server which can be access form the api section.
 
 # Display
 
