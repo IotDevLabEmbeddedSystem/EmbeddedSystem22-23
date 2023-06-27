@@ -28,9 +28,9 @@ class SensorHome extends StatelessWidget {
           if (snapshot.hasData && sensorData1.sensorData1.isNotEmpty) {
             
             return Scaffold(
-              bottomNavigationBar: const BottomNavigation(
-                selectedIndex: 4,
-              ),
+              // bottomNavigationBar: const BottomNavigation(
+              //   selectedIndex: 4,
+              // ),
               appBar: AppBar(
                        iconTheme: IconThemeData(color: const Color(0xFF3E64FF),),
 
@@ -43,7 +43,7 @@ class SensorHome extends StatelessWidget {
                       width: 20,
                     ),
                     Text(
-                      "Hello,Welcome \n Nhana Qwahme",
+                      "Hello,Welcome ",
                       style: TextStyle(
                           fontSize: 24,
                           color: Color(0xFF3E64FF),

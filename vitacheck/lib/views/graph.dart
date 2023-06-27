@@ -9,9 +9,9 @@ class Graph extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigation(
-        selectedIndex: 4,
-      ),
+      // bottomNavigationBar: BottomNavigation(
+      //   selectedIndex: 4,
+      // ),
       appBar: AppBar(
                iconTheme: IconThemeData(color: const Color(0xFF3E64FF),),
 
@@ -25,7 +25,7 @@ class Graph extends StatelessWidget {
                 width: 20,
               ),
               Text(
-                "Good morning \n Kwame",
+                "Statistics",
                 style: TextStyle(
                   overflow: TextOverflow.clip,
                   color: const Color(0xFF3E64FF),

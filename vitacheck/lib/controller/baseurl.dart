@@ -6,8 +6,9 @@
 // }
 
 class APPBASEURL {
-  static String baseUrl = "https://vitalcheckapiv2-production.up.railway.app/api/";
+  // static String baseUrl = "https://vitalcheckapiv2-production.up.railway.app/api/";
   // "https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/";
+ static String baseUrl = "https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/";
    
 // }
 }

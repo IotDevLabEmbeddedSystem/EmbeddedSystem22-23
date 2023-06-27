@@ -19,7 +19,7 @@ Map respData={};
     try {
       var dio = Dio();
       Response response = await dio.get(
-          "${APPBASEURL.baseUrl}sensorData/$public");
+          APPBASEURL.baseUrl+"sensorData/f0562ba7-8fc4-4fea-919a-f8592b8fe251");
          respData= response.data;
 
          print(respData);
