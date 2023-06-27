@@ -10,21 +10,22 @@ The project includes an API that uses Flask to handle databases and simple reque
 - add user (patient), doctor, nurse, and sensor data
 - login requests, registrations, appointments, checks, viewing of health information, etc.
 
-Wayscript, which makes it simple to deploy Flask apps, hosted the API.
-Elephant dp is the database server in use.
+railway, which makes it simple to deploy Flask apps, hosted the API.
+SQLlite db is the database server in use.
+base_URL =https://vitalcheckapiv2-vitalcheckapiv2.up.railway.app/api/
 
 ### api Endpoints
 |Status    |    Method    |            EndPoint                                                              |
-|    DONE  |     post     | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/sensor_data   |
-|   DONE   |     GET      | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/sensorData    |
-|   DONE   |     POST     | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/login         |
-|   DONE   |     GET      | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/user          |
-| !STARTED |     post     | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/doctor        |
-| !STARTED |     GET      | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/doctors       |
-| !STARTED |     post     | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/nurse         |
-| !STARTED |     post     | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/nurses        |
-| !STARTED |     post     | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/appointment   |
-| !STARTED |     GET      | https://compellingly-sunny-velocity-vacuum-dev.wayscript.cloud/api/appointments  |
+|    DONE  |     post     | base_URL+sensor_data   |
+|   DONE   |     GET      |  base_URL+sensorData   |
+|   DONE   |     POST     | base_URL+login         |
+|   DONE   |     GET      | base_URL+user          |
+| !STARTED |     post     | base_URL+doctor        |
+| !STARTED |     GET      | base_URL+doctors       |
+| !STARTED |     post     | base_URL+nurse         |
+| !STARTED |     post     | base_URL+nurses        |
+| !STARTED |     post     | base_URL+appointment   |
+| !STARTED |     GET      | base_URL+appointments  |
 
 
 
